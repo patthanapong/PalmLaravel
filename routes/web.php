@@ -39,3 +39,14 @@ Route::get('text/{name}', function($name) {
 })->where('name','[A-Z,a-z]+');  //สามารถใส่่ได้เฉพาะตัวอักษรเท่านั้น
 
 route::any('poll', 'Auth\LoginController@poll');
+
+route::get('movie','MovieController@index');
+Route::get('view','MovieController@view');
+Route::get('palm','PalmController@index');
+route::get('palmplay','PalmController@play');
+route::get('band','PalmController@band');
+
+
+Route::resource('lib','LibController');
+
+//router::get('palmplay','PalmController@play');
